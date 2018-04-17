@@ -1,0 +1,34 @@
+DECLARE kursor CURSOR FOR
+SELECT Column3,date,channel,description,[2nd_Description],Start_time,Duration FROM dbo.hd_project
+DECLARE @dataa char(50), @id INT,@channel char(50),@description char(50),@second_Description char(100),@Start_time char(50),@Duration char(50),@bef_data char(50),@bef_channel char(50),@bef_description char(50),@bef_second_Description char(50),@bef_Start_time char(50),@bef_Duration char(50)
+OPEN kursor 
+FETCH NEXT FROM kursor INTO  @id ,@dataa,@channel ,@description ,@second_Description ,@Start_time ,@Duration
+WHILE @@FETCH_STATUS = 0
+  BEGIN 
+  print @id
+ --data
+	if len(replace(@dataa,' ',''))>1 
+		set @bef_data=replace(@dataa,'"','')
+--channel
+	 if len(replace(@channel,' ',''))>1 
+		set @bef_channel=replace(@channel,'"','')
+--description
+	if len(replace(@description,' ',''))>1 
+		set @bef_description=replace(@description,'"','')
+--2second_description
+	if len(replace(@dataa,' ',''))>1 
+		set @bef_second_description=replace(@second_description,'"','')
+--start_time
+	if len(replace(@start_time,' ',''))>1 
+		set @bef_start_time=replace(@start_time,'"','')
+--duration
+	if len(replace(@duration,' ',''))>1 
+		set @bef_duration=replace(@duration,'"','')
+	if  (@id is not null and @dataa is not null and @channel  is not null and @description  is not null and @second_Description  is not null and @Start_time  is not null and @Duration is not null)
+	update dbo.hd_project 
+	set duration=@bef_duration,date=@bef_data,channel=@bef_channel,description=@bef_description,[2nd_description]=@bef_second_description,start_time=@bef_start_time
+		where Column3=@id
+	 FETCH NEXT FROM kursor INTO  @id ,@dataa,@channel ,@description ,@second_Description ,@Start_time ,@Duration
+   END 
+CLOSE kursor 
+DEALLOCATE kursor
