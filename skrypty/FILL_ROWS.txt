@@ -1,0 +1,31 @@
+
+DECLARE @old varchar(50);
+DECLARE @old_long varchar(100);
+UPDATE hd_project WITH(TABLOCKX)
+SET @old = Date = CASE WHEN len(Date)<1 THEN @old ELSE Date END
+OPTION(MAXDOP 1);
+
+set @old=''
+UPDATE hd_project WITH(TABLOCKX)
+SET @old = Channel= CASE WHEN len(Channel)= THEN @old ELSE Channel END
+OPTION(MAXDOP 1);
+
+set @old_long=''
+UPDATE hd_project WITH(TABLOCKX)
+SET @old_long = Description = CASE WHEN len(Description)<1 THEN @old_long ELSE Description END
+OPTION(MAXDOP 1);
+
+set @old_long=''
+UPDATE hd_project WITH(TABLOCKX)
+SET @old_long = Second_Description = CASE WHEN len(Second_Description)<1 THEN @old_long ELSE Second_Description END
+OPTION(MAXDOP 1);
+
+set @old=''
+UPDATE hd_project WITH(TABLOCKX)
+SET @old = Start_time = CASE WHEN len(Start_time)<1 THEN @old ELSE Start_time END
+OPTION(MAXDOP 1);
+
+set @old_long=''
+UPDATE hd_project WITH(TABLOCKX)
+SET @old = Duration = CASE WHEN len(Duration)<1 THEN @old ELSE Duration END
+OPTION(MAXDOP 1);
