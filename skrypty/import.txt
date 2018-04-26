@@ -1,0 +1,34 @@
+
+--zasilenie kana³ów
+truncate table rough;
+insert into rough(value) select distinct replace(channel,'"','') from hd_project where replace(channel,'"','') not in( select channel_name from channel);
+insert into dbo.CHANNEL(channel_name) select value from dbo.rough;
+
+--zasilanie programów
+truncate table rough;
+insert into rough(value,value2) select distinct replace(description,'"',''),replace(second_description,'"','') from hd_project;
+insert into dbo.PROGRAMME(description,second_description) 
+select value,value2 from dbo.rough where (value not in (select description from PROGRAMME) and value2 not in (select second_description from PROGRAMME))
+
+--zasilenie czasu
+truncate table rough;
+insert into rough(value) select distinct replace(start_time,'"','') from hd_project;
+insert into dbo.time(hour_normal,hour_radio,minute,second) 
+select ((convert(integer,substring(value,1,2))+22)%26),substring(value,1,2),substring(value,4,2),substring(value,7,2) from dbo.rough
+
+--zasilenie daty
+truncate table rough;
+insert into rough(value) select distinct REPLACE(replace(date,'"',''),'-','/') from hd_project;
+insert into dbo.Date(YEAR,QUARTER,MONTH,WEEK,DAY,DOW) 
+select convert(integer,DATEPART(YEAR,CONVERT(DATE,value))),convert(integer,DATEPART(quarter,CONVERT(DATE,value))),convert(integer,DATEPART(MONTH,CONVERT(DATE,value))),convert(integer,DATEPART(week,CONVERT(DATE,value))),convert(integer,DATEPART(DAY,CONVERT(DATE,value))),convert(integer,DATEPART(weekday,CONVERT(DATE,value))) from dbo.rough
+
+--zasilenie grup
+TRUNCATE TABLE ROUGH
+insert into rough(value,value2) select replace(VARIABLE,'"',''),replace(replace(A16_49,'%',''),' ','')  from hd_project;
+insert into dbo.GROUPS(VARIABLE_NAME,GROUP_NAME,VALUE)
+select value,'A16-49',convert(integer,replace(value2,'0,000','0'))  from dbo.rough where not exists (select * from groups)
+
+select distinct variable, A16_49 from hd_project distinct date, channel, description from hd_project
+
+
+select * from hd_project
