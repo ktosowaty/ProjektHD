@@ -107,7 +107,7 @@ create table GROUPS
    GROUP_ID             numeric                        not null,
    VARIABLE_NAME        text                           null,
    GROUP_NAME           text                           null,
-   VALUE                numeric                        null,
+   VALUE                money                        null,
    constraint PK_GROUPS primary key clustered (GROUP_ID)
 );
 
