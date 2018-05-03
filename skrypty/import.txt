@@ -1,34 +1,89 @@
 
---zasilenie kana≥Ûw
+--create table rough(value varchar(100),value2 varchar(100))
+--DROP TABLE ROUGH
+
+--zasilenie kana≈Ç√≥w
 truncate table rough;
 insert into rough(value) select distinct replace(channel,'"','') from hd_project where replace(channel,'"','') not in( select channel_name from channel);
 insert into dbo.CHANNEL(channel_name) select value from dbo.rough;
 
---zasilanie programÛw
+--zasilanie program√≥w
 truncate table rough;
 insert into rough(value,value2) select distinct replace(description,'"',''),replace(second_description,'"','') from hd_project;
-insert into dbo.PROGRAMME(description,second_description) 
-select value,value2 from dbo.rough where (value not in (select description from PROGRAMME) and value2 not in (select second_description from PROGRAMME))
 
---zasilenie czasu
-truncate table rough;
-insert into rough(value) select distinct replace(start_time,'"','') from hd_project;
-insert into dbo.time(hour_normal,hour_radio,minute,second) 
-select ((convert(integer,substring(value,1,2))+22)%26),substring(value,1,2),substring(value,4,2),substring(value,7,2) from dbo.rough
-
---zasilenie daty
-truncate table rough;
-insert into rough(value) select distinct REPLACE(replace(date,'"',''),'-','/') from hd_project;
-insert into dbo.Date(YEAR,QUARTER,MONTH,WEEK,DAY,DOW) 
-select convert(integer,DATEPART(YEAR,CONVERT(DATE,value))),convert(integer,DATEPART(quarter,CONVERT(DATE,value))),convert(integer,DATEPART(MONTH,CONVERT(DATE,value))),convert(integer,DATEPART(week,CONVERT(DATE,value))),convert(integer,DATEPART(DAY,CONVERT(DATE,value))),convert(integer,DATEPART(weekday,CONVERT(DATE,value))) from dbo.rough
+MERGE INTO 
+  PROGRAMME a
+USING
+  (SELECT * FROM rough) b
+ON
+  (a.description = b.value and a.second_description=b.value2)
+when not matched then INSERT (description, second_description) values (b.value, b.value2);
 
 --zasilenie grup
+--update b≈Çednych liczb
+
+UPDATE hd_project WITH(TABLOCKX) 
+SET A16_49=replace(replace(replace(replace(A16_49,'%',''),'0,000','0'),',','.'),' ',''),
+M16_49=replace(replace(replace(replace(M16_49,'%',''),'0,000','0'),',','.'),' ',''),
+A4_15=replace(replace(replace(replace(A4_15,'%',''),'0,000','0'),',','.'),' ',''),
+A4_9=replace(replace(replace(replace(A4_9,'%',''),'0,000','0'),',','.'),' ','');
+
+--usuwa n.a
+UPDATE hd_project WITH(TABLOCKX) SET A16_49='0.0'  where  A16_49 like('%n.a%') 
+UPDATE hd_project WITH(TABLOCKX) set M16_49='0.0'  where  M16_49  like('%n.a%') 
+UPDATE hd_project WITH(TABLOCKX) set A4_15='0.0'  where  A4_15  like('%n.a%') 
+UPDATE hd_project WITH(TABLOCKX) SET A4_9='0.0'  where  A4_9  like('%n.a%') 
+
+--zamienia na liczby bez spacji
+UPDATE hd_project WITH(TABLOCKX) SET A16_49=SUBSTRING(A16_49,1,len(A16_49)-4)+SUBSTRING(A16_49,len(A16_49)-2,3) where TRY_CONVERT(money,replace(A16_49,' ','')) is  null
+UPDATE hd_project WITH(TABLOCKX) SET M16_49=SUBSTRING(M16_49,1,len(M16_49)-4)+SUBSTRING(M16_49,len(M16_49)-2,3) where TRY_CONVERT(money,replace(M16_49,' ','')) is  null
+UPDATE hd_project WITH(TABLOCKX) SET A4_15=SUBSTRING(A4_15,1,len(A4_15)-4)+SUBSTRING(A4_15,len(A4_15)-2,3) where TRY_CONVERT(money,replace(A4_15,' ','')) is  null
+UPDATE hd_project WITH(TABLOCKX)SET A4_9=SUBSTRING(A4_9,1,len(A4_9)-4)+SUBSTRING(A4_9,len(A4_9)-2,3) where TRY_CONVERT(money,replace(A4_9,' ','')) is  null
+alter table groups alter column value  money
+--A16_49
 TRUNCATE TABLE ROUGH
-insert into rough(value,value2) select replace(VARIABLE,'"',''),replace(replace(A16_49,'%',''),' ','')  from hd_project;
-insert into dbo.GROUPS(VARIABLE_NAME,GROUP_NAME,VALUE)
-select value,'A16-49',convert(integer,replace(value2,'0,000','0'))  from dbo.rough where not exists (select * from groups)
+insert into rough(value,value2) select replace(VARIABLE,'"',''),A16_49  from hd_project;
 
-select distinct variable, A16_49 from hd_project distinct date, channel, description from hd_project
+MERGE INTO
+  GROUPS a
+USING
+  (SELECT * FROM rough) b
+ON
+  (a.VARIABLE_NAME = b.value and a.VALUE=b.value2 and a.GROUP_NAME='A16-49')
+when not matched then  INSERT (VARIABLE_NAME,GROUP_NAME,VALUE) values (b.value,'A16-49', b.value2);
 
+--M16_49
+TRUNCATE TABLE ROUGH
+insert into rough(value,value2) select replace(VARIABLE,'"',''),M16_49  from hd_project;
 
-select * from hd_project
+MERGE INTO
+  GROUPS a
+USING
+  (SELECT * FROM rough) b
+ON
+  (a.VARIABLE_NAME = b.value and a.VALUE=b.value2 and a.GROUP_NAME='M16_49')
+when not matched then  INSERT (VARIABLE_NAME,GROUP_NAME,VALUE) values (b.value,'M16_49', b.value2);
+
+--A4_15
+TRUNCATE TABLE ROUGH
+insert into rough(value,value2) select replace(VARIABLE,'"',''),A4_15  from hd_project;
+
+MERGE INTO
+  GROUPS a
+USING
+  (SELECT * FROM rough) b
+ON
+  (a.VARIABLE_NAME = b.value and a.VALUE=b.value2 and a.GROUP_NAME='A4_15')
+when not matched then  INSERT (VARIABLE_NAME,GROUP_NAME,VALUE) values (b.value,'A4_15', b.value2);
+
+--A4_9
+TRUNCATE TABLE ROUGH
+insert into rough(value,value2) select replace(VARIABLE,'"',''),A4_9  from hd_project;
+
+MERGE INTO
+  GROUPS a
+USING
+  (SELECT * FROM rough) b
+ON
+  (a.VARIABLE_NAME = b.value and a.VALUE=b.value2 and a.GROUP_NAME='A4_9')
+when not matched then  INSERT (VARIABLE_NAME,GROUP_NAME,VALUE) values (b.value,'A4_9', b.value2);
