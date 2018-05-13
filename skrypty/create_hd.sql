@@ -1,38 +1,4 @@
-/*==============================================================*/
-/* DBMS name:      Sybase SQL Anywhere 12                       */
-/* Created on:     06.04.2018 21:52:41                          */
-/*==============================================================*/
 
-
-if exists(select 1 from sys.sysforeignkey where role='FK_FACTS_TA_RELATIONS_TIME') then
-    alter table FACTS_TABLE
-       delete foreign key FK_FACTS_TA_RELATIONS_TIME
-end if;
-
-if exists(select 1 from sys.sysforeignkey where role='FK_FACTS_TA_RELATIONS_GROUPS') then
-    alter table FACTS_TABLE
-       delete foreign key FK_FACTS_TA_RELATIONS_GROUPS
-end if;
-
-if exists(select 1 from sys.sysforeignkey where role='FK_FACTS_TA_RELATIONS_PROGRAMM') then
-    alter table FACTS_TABLE
-       delete foreign key FK_FACTS_TA_RELATIONS_PROGRAMM
-end if;
-
-if exists(select 1 from sys.sysforeignkey where role='FK_FACTS_TA_RELATIONS_CHANNEL') then
-    alter table FACTS_TABLE
-       delete foreign key FK_FACTS_TA_RELATIONS_CHANNEL
-end if;
-
-if exists(select 1 from sys.sysforeignkey where role='FK_FACTS_TA_RELATIONS_DATEl') then
-    alter table FACTS_TABLE
-       delete foreign key FK_FACTS_TA_RELATIONS_DATEl
-end if;
-
-if exists(select 1 from sys.sysforeignkey where role='FK_FACTS_TA_RELATIONS_DATE') then
-    alter table FACTS_TABLE
-       delete foreign key FK_FACTS_TA_RELATIONS_DATE
-end if;
 
 drop table if exists CHANNEL;
 
@@ -53,8 +19,8 @@ drop table if exists "TIME";
 /*==============================================================*/
 create table CHANNEL 
 (
-   CHANNEL_ID           numeric                        not null,
-   CHANNEL_NAME         text                           null,
+   CHANNEL_ID           INTEGER IDENTITY               not null,
+   CHANNEL_NAME         varchar(50)                           null,
    constraint PK_CHANNEL primary key clustered (CHANNEL_ID)
 );
 
@@ -63,10 +29,14 @@ create table CHANNEL
 /*==============================================================*/
 create table "DATE" 
 (
-   DATE_ID              numeric                        not null,
-   ROK                  integer                        null,
-   MIESIAC              integer                        null,
-   DZIEN                integer                        null,
+   DATE_ID            INTEGER IDENTITY                        not null,
+   YEAR               integer                        null,
+   QUARTER            integer                        null,
+   MONTH              integer                        null,
+   DAY                integer                        null,
+   WEEK				  integer                        null,
+   DOW				  integer                        null,
+   WHOLE_DATA		  varchar(50)					 null,
    constraint PK_DATE primary key clustered (DATE_ID)
 );
 
@@ -75,20 +45,20 @@ create table "DATE"
 /*==============================================================*/
 create table FACTS_TABLE 
 (
-   FACT_ID              numeric                        not null,
-   CHANNEL_ID           numeric                        null,
-   PROGRAMME_ID         numeric                        null,
-   START_TIME_ID        numeric                        null,
-   DURATION             numeric                        null,
-   NORMAL_DATE_ID       numeric                        null,
-   TIME_ID              numeric                        null,
-   RADIO_DATE_ID        numeric                        null,
+   FACT_ID              integer                        not null,
+   CHANNEL_ID           integer                        null,
+   PROGRAMME_ID         integer                        null,
+   START_TIME_ID        integer                        null,
+   DURATION             integer                        null,
+   NORMAL_DATE_ID       integer                        null,
+   TIME_ID              integer                        null,
+   RADIO_DATE_ID        integer                        null,
    AMR                  integer                        null,
-   AMR%                 numeric(0)                     null,
-   SHR%                 numeric(0)                     null,
-   RCH%                 numeric(0)                     null,
-   RCH                  integer                        null,
-   GROUP_ID             numeric                        null,
+   [AMR%]               integer                        null,
+   [SHR%]               integer                        null,
+   [RCH%]               integer                        null,
+   [RCH]                integer                        null,
+   GROUP_ID             integer                        null,
    constraint PK_FACTS_TABLE primary key clustered (FACT_ID)
 );
 
@@ -104,10 +74,10 @@ PROGRAMME_ID ASC
 /*==============================================================*/
 create table GROUPS 
 (
-   GROUP_ID             numeric                        not null,
-   VARIABLE_NAME        text                           null,
-   GROUP_NAME           text                           null,
-   VALUE                money                        null,
+   GROUP_ID             INTEGER IDENTITY                        not null,
+   VARIABLE_NAME        varchar(50)                            null,
+   GROUP_NAME           varchar(50)                            null,
+   VALUE                integer                        null,
    constraint PK_GROUPS primary key clustered (GROUP_ID)
 );
 
@@ -116,9 +86,9 @@ create table GROUPS
 /*==============================================================*/
 create table PROGRAMME 
 (
-   PROGRAMME_ID         numeric                        not null,
-   DESCRIPTION          text                           null,
-   2ND_DESCRIPTION      text                           null,
+   PROGRAMME_ID         INTEGER IDENTITY                        not null,
+   DESCRIPTION          varchar(100)                            null,
+   SECOND_DESCRIPTION      varchar(100)                            null,
    constraint PK_PROGRAMME primary key clustered (PROGRAMME_ID)
 );
 
@@ -127,47 +97,36 @@ create table PROGRAMME
 /*==============================================================*/
 create table "TIME" 
 (
-   TIME_ID              numeric                        not null,
+   TIME_ID              INTEGER IDENTITY               not null,
    HOUR_NORMAL          integer                        null,
    HOUR_RADIO           integer                        null,
    MINUTE               integer                        null,
-   SECOND               integer                        null,
+   WHOLE_TIME			varchar(50)					   null,
+   FLAG					integer     				   null,
    constraint PK_TIME primary key clustered (TIME_ID)
 );
 
 alter table FACTS_TABLE
    add constraint FK_FACTS_TA_RELATIONS_TIME foreign key (TIME_ID)
-      references "TIME" (TIME_ID)
-      on update restrict
-      on delete restrict;
+      references "TIME" (TIME_ID);
 
 alter table FACTS_TABLE
    add constraint FK_FACTS_TA_RELATIONS_GROUPS foreign key (GROUP_ID)
-      references GROUPS (GROUP_ID)
-      on update restrict
-      on delete restrict;
+      references GROUPS (GROUP_ID);
 
 alter table FACTS_TABLE
    add constraint FK_FACTS_TA_RELATIONS_PROGRAMM foreign key (PROGRAMME_ID)
-      references PROGRAMME (PROGRAMME_ID)
-      on update restrict
-      on delete restrict;
+      references PROGRAMME (PROGRAMME_ID);
 
 alter table FACTS_TABLE
    add constraint FK_FACTS_TA_RELATIONS_CHANNEL foreign key (CHANNEL_ID)
-      references CHANNEL (CHANNEL_ID)
-      on update restrict
-      on delete restrict;
+      references CHANNEL (CHANNEL_ID);
 
 alter table FACTS_TABLE
    add constraint FK_FACTS_TA_RELATIONS_DATEl foreign key (RADIO_DATE_ID)
-      references "DATE" (DATE_ID)
-      on update restrict
-      on delete restrict;
+      references "DATE" (DATE_ID);
 
 alter table FACTS_TABLE
    add constraint FK_FACTS_TA_RELATIONS_DATE foreign key (NORMAL_DATE_ID)
-      references "DATE" (DATE_ID)
-      on update restrict
-      on delete restrict;
+      references "DATE" (DATE_ID);
 
