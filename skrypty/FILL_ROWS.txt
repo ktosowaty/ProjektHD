@@ -1,4 +1,4 @@
-truncate table hd_project
+
 DECLARE @old varchar(50);
 DECLARE @old_long varchar(100);
 UPDATE hd_project WITH(TABLOCKX)
@@ -29,3 +29,7 @@ set @old_long=''
 UPDATE hd_project WITH(TABLOCKX)
 SET @old = Duration = CASE WHEN len(replace(Duration),'"',''))<1 THEN @old ELSE Duration END
 OPTION(MAXDOP 1);
+
+set @old_long=''
+UPDATE hd_project WITH(TABLOCKX)
+SET A16_49 = replace(REPLACE(REPLACE(REPLACE(A16_49,'0.000','0'),'%',''),',','.'),' ','' )
