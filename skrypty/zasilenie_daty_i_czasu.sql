@@ -1,5 +1,4 @@
-delete date
-delete time
+
 --data
 declare @start_data  date;
 declare @end_data  date;
@@ -22,8 +21,10 @@ set @time='01-01-2010 00:00:00';
 while datepart(day,@time)<>'2'
 begin
 insert into dbo.time(hour_normal,hour_radio,minute) 
-values (datepart(hour,@time),datepart(hour,DATEADD(hour,2,@time)),datepart(minute,@time))
+values (datepart(hour,@time),datepart(hour,@time),datepart(minute,@time))
+set @time=dateadd(hour,1,@time)
 end 
+
 
 --zasilenie godziny radiowej
 UPDATE dbo.time  
