@@ -1,0 +1,972 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/2/2018 5:22:12 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-LDIQM1D"
+  DTS:CreatorName="DESKTOP-LDIQM1D\patrycja"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{92517066-3D4C-4C3F-BD54-01F905C77735}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.92"
+  DTS:LocaleID="1045"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="package_vol4"
+  DTS:VersionGUID="{978CA9EF-6EAF-44A1-AC55-2A00619DBD87}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F7C3FF43-AB8C-44E7-A3C3-D9D173770443}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=b;Provider=SQLOLEDB;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{03BF69DC-0A35-4C29-9E71-B5FC53CC3479}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=b;Provider=SQLOLEDB;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{662F7ED4-9E6E-4996-89DB-432A1CD7D828}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Data Conversion 0 - 0"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion 0 - 0"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[A16_49]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="A16_49"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A16_49]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[M16_49]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="M16_49"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[M16_49]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[A4_15]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="A4_15"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A4_15]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[A4_9]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="A4_9"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A4_9]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Column3]"
+                      cachedDataType="i4"
+                      cachedName="Column3"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Column3]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[A16_49]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[A16_49]"
+                      name="A16_49"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A16_49]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[M16_49]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[M16_49]"
+                      name="M16_49"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[M16_49]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[A4_15]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[A4_15]"
+                      name="A4_15"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A4_15]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[A4_9]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[A4_9]"
+                      name="A4_9"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A4_9]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Column3]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Column3]"
+                      name="Column3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Column3]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Destination - HD_PROJECT2"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - HD_PROJECT2"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[HD_PROJECT2]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[Date]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Date&quot;]"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[Channel]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Channel"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Channel&quot;]"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Channel]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[Description]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Description&quot;]"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[second_Description]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="second_Description"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;2nd Description&quot;]"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[second_Description]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[Start_time]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Start_time"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Start time&quot;]"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Start_time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[Duration]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Duration"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Duration&quot;]"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Duration]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[Variable]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Variable"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Variable Target&quot;]"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Variable]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[Total_Individuals]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Total_Individuals"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Total Individuals&quot;]"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Total_Individuals]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[Podgrupa]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Podgrupa"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Podgrupa&quot;]"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Podgrupa]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[A16_49]"
+                      cachedDataType="numeric"
+                      cachedName="A16_49"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;A16-49&quot;]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[A16_49]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[M16_49]"
+                      cachedDataType="numeric"
+                      cachedName="M16_49"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;M16-49&quot;]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[M16_49]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[A4_15]"
+                      cachedDataType="numeric"
+                      cachedName="A4_15"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;A4-15&quot;]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[A4_15]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[A4_9]"
+                      cachedDataType="numeric"
+                      cachedName="A4_9"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;A4-9&quot;]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[A4_9]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].Columns[Column3]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Column3"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[Column 13]"
+                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Column3]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Date&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Date&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Channel&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Channel&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Description&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="&quot;Description&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;2nd Description&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="&quot;2nd Description&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Start time&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Start time&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Duration&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Duration&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Variable Target&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Variable Target&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Total Individuals&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Total Individuals&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;Podgrupa&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Podgrupa&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;A16-49&quot;]"
+                      dataType="numeric"
+                      name="&quot;A16-49&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;M16-49&quot;]"
+                      dataType="numeric"
+                      name="&quot;M16-49&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;A4-15&quot;]"
+                      dataType="numeric"
+                      name="&quot;A4-15&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[&quot;A4-9&quot;]"
+                      dataType="numeric"
+                      name="&quot;A4-9&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input].ExternalColumns[Column 13]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Column 13" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - HD_PROJECT"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source - HD_PROJECT"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[HD_PROJECT]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - HD_PROJECT.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Date]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Channel]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Channel]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Channel]"
+                      name="Channel"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Description]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[second_Description]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[second_Description]"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[second_Description]"
+                      name="second_Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Start_time]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Start_time]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Start_time]"
+                      name="Start_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Duration]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Duration]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Duration]"
+                      name="Duration"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Variable]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Variable]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Variable]"
+                      name="Variable"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Total_Individuals]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Total_Individuals]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Total_Individuals]"
+                      name="Total_Individuals"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Podgrupa]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Podgrupa]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Podgrupa]"
+                      name="Podgrupa"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[A16_49]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A16_49]"
+                      name="A16_49"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[M16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[M16_49]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[M16_49]"
+                      name="M16_49"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A4_15]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[A4_15]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A4_15]"
+                      name="A4_15"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A4_9]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[A4_9]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[A4_9]"
+                      name="A4_9"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Column3]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Column3]"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].Columns[Column3]"
+                      name="Column3"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Channel]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Channel" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[second_Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="second_Description" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Start_time]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Start_time" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Duration]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Duration" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Variable]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Variable" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Total_Individuals]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Total_Individuals" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Podgrupa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Podgrupa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[A16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="A16_49" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[M16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="M16_49" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[A4_15]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="A4_15" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[A4_9]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="A4_9" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output].ExternalColumns[Column3]"
+                      dataType="i4"
+                      name="Column3" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Channel]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Channel]"
+                      name="Channel" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[second_Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[second_Description]"
+                      name="second_Description" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Start_time]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Start_time]"
+                      name="Start_time" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Duration]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Duration]"
+                      name="Duration" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Variable]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Variable]"
+                      name="Variable" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Total_Individuals]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Total_Individuals]"
+                      name="Total_Individuals" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Podgrupa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Podgrupa]"
+                      name="Podgrupa" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[A16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[A16_49]"
+                      name="A16_49" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[M16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[M16_49]"
+                      name="M16_49" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[A4_15]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[A4_15]"
+                      name="A4_15" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[A4_9]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[A4_9]"
+                      name="A4_9" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Column3]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[Column3]"
+                      name="Column3" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task 1\Destination - HD_PROJECT2.Inputs[Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source - HD_PROJECT.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+</DTS:Executable>

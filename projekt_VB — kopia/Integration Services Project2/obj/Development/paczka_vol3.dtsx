@@ -1,0 +1,2520 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/23/2018 6:24:28 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-LDIQM1D"
+  DTS:CreatorName="DESKTOP-LDIQM1D\patrycja"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{87672C0A-E98E-4C17-AF8A-7320A8CBDC23}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.101"
+  DTS:LocaleID="1045"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="paczka_vol3"
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{0F69C07E-E96D-411E-BE34-DF58A51803C6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-LDIQM1D.b]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F8A2A635-6672-4A1C-A402-E26324B43095}"
+      DTS:ObjectName="DESKTOP-LDIQM1D.b">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-LDIQM1D;Initial Catalog=b;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DAC55F50-9B38-4CAC-AD21-904516CE7C2C}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=b;Provider=SQLOLEDB;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FD8F6717-77FF-4283-8471-B557BE72744D}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\patrycja\Desktop\projekt_hd\projekt\tttt.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pivot Key Value"
+              DTS:DTSID="{86A70EA8-DB51-4C5E-9232-C2ED7EFF7619}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="test"
+              DTS:DTSID="{AAC09F60-E454-478A-B1D6-AA9568244605}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{427DF768-A421-4CD7-97FC-1B0C56BF7860}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Channel"
+              DTS:DTSID="{0098AFA2-2712-457A-BCD3-AFD3D027296C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{1EFC20E7-E7B1-4D93-B6FE-261E24423203}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="second_Description"
+              DTS:DTSID="{F63CCF79-B6F8-42A3-B196-7DD396BD6E80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Start_time"
+              DTS:DTSID="{A07F0EA9-99A0-41CA-8DDC-2D28E4B7073D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Duration"
+              DTS:DTSID="{F095B206-104A-43A7-86CD-CBC9C4742314}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Variable"
+              DTS:DTSID="{486C8DF3-4340-4718-AA7C-04B02D704656}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column3"
+              DTS:DTSID="{D04ECC07-EEE7-4322-BA55-F32EB069AC00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{AAB50CF7-A214-4CB3-A922-AF4FF9F1A05C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{DFD2C152-DDD1-4E0A-B6E6-EEC6A51FD144}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E5069F1D-72E8-46EC-A077-0E1D1B0F45C2}"
+      DTS:ObjectName="SourceConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\patrycja\Desktop\projekt_hd\HD_PROJECT.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Date&quot;"
+              DTS:DTSID="{1F3DD886-DA7E-4EF9-A361-D32EC3EB55E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Channel&quot;"
+              DTS:DTSID="{C350BF21-F4F6-4D74-993D-47ACD8263619}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Description&quot;"
+              DTS:DTSID="{58261B14-42AC-4150-96AF-289A03446025}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;2nd Description&quot;"
+              DTS:DTSID="{B230F7D7-2D44-42E4-8F07-FD249E7EA6B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Start time&quot;"
+              DTS:DTSID="{FDCC58B8-9840-480D-BAC7-EB59FD0FFC1E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Duration&quot;"
+              DTS:DTSID="{EE73F372-94F6-40EC-A9AC-D06A78B8987C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Variable Target&quot;"
+              DTS:DTSID="{967ED599-4EE3-478E-A405-BCEC1B87D5F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Total Individuals&quot;"
+              DTS:DTSID="{030050A7-9983-4672-B2AD-9643B05397BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Podgrupa&quot;"
+              DTS:DTSID="{D0376686-9CFF-4BD2-8227-65F75F246B05}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;A16-49&quot;"
+              DTS:DTSID="{42C226E3-7E4D-4D47-9603-1809B3E533A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;M16-49&quot;"
+              DTS:DTSID="{0AE0F12C-60B8-49FE-999F-BC809F656C6F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;A4-15&quot;"
+              DTS:DTSID="{7D9EE5F3-9AB6-4739-8E9B-E5476D6B996C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;A4-9&quot;"
+              DTS:DTSID="{20FD6AC7-24A4-4F65-A740-8AC829D7A1F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 13"
+              DTS:DTSID="{EC28F8A2-4E65-4BBD-A40B-11F83F3AEB1F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2017114C-582C-4F76-B18C-63B82A8B9EFF}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="grupa">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E3766078-F965-49DB-B732-E48B4AC865E8}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="grupa2">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8254324E-5DF2-4A50-9CDB-9E96DD823326}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[TABLE_PIVOT]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LDIQM1D.b]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LDIQM1D.b]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[second_Description]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="second_Description"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[second_Description]"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[second_Description]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Start_time]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Start_time"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Start_time]"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Start_time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Duration]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Duration"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Duration]"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Duration]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Variable]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Variable"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Variable]"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Variable]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Channel]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Channel"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Channel]"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Channel]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Description]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Pivot Key Value]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Pivot Key Value"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Group2]"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Pivot Key Value]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[test]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="test"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VALUE]"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[test]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Channel]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Channel" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[second_Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="second_Description" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Start_time]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Start_time" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Duration]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Duration" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Variable]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Variable" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Group2]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Group2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VALUE]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="VALUE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Source 1"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source 1"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[HD_PROJECT]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Source 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Date]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Channel]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Channel]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Channel]"
+                      name="Channel"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Description]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      length="100"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[second_Description]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[second_Description]"
+                      length="100"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[second_Description]"
+                      name="second_Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Start_time]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Start_time]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Start_time]"
+                      name="Start_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Duration]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Duration]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Duration]"
+                      name="Duration"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Variable]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Variable]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Variable]"
+                      name="Variable"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Total_Individuals]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Total_Individuals]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Total_Individuals]"
+                      name="Total_Individuals"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Podgrupa]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Podgrupa]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Podgrupa]"
+                      name="Podgrupa"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[A16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[A16_49]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[A16_49]"
+                      name="A16_49"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[M16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[M16_49]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[M16_49]"
+                      name="M16_49"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[A4_15]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[A4_15]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[A4_15]"
+                      name="A4_15"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[A4_9]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[A4_9]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[A4_9]"
+                      name="A4_9"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Column3]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Column3]"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Column3]"
+                      name="Column3"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Channel]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Channel" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[second_Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="second_Description" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Start_time]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Start_time" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Duration]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Duration" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Variable]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Variable" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Total_Individuals]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Total_Individuals" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Podgrupa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Podgrupa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[A16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="A16_49" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[M16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="M16_49" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[A4_15]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="A4_15" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[A4_9]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="A4_9" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Column3]"
+                      dataType="i4"
+                      name="Column3" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Channel]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Channel]"
+                      name="Channel" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[second_Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[second_Description]"
+                      name="second_Description" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Start_time]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Start_time]"
+                      name="Start_time" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Duration]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Duration]"
+                      name="Duration" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Variable]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Variable]"
+                      name="Variable" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Total_Individuals]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Total_Individuals]"
+                      name="Total_Individuals" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Podgrupa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Podgrupa]"
+                      name="Podgrupa" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[A16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[A16_49]"
+                      name="A16_49" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[M16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[M16_49]"
+                      name="M16_49" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[A4_15]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[A4_15]"
+                      name="A4_15" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[A4_9]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[A4_9]"
+                      name="A4_9" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Column3]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Column3]"
+                      name="Column3" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Unpivot 1"
+              componentClassID="Microsoft.UnPivot"
+              contactInfo="Unpivot;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Expands an un-normalized data flow into a more normalized version. Values from multiple columns of a single record expand to multiple records in a single column. For example, expand a table that lists athletic scores with a column for each game to more records and a single score column."
+              name="Unpivot 1">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input]"
+                  hasSideEffects="true"
+                  name="Unpivot Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[A4_9]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="A4_9"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[A4_9]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[test]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">A4_9</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[A4_15]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="A4_15"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[A4_15]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[test]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">A4_15</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[M16_49]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="M16_49"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[M16_49]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[test]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">M16_49</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[A16_49]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="A16_49"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[A16_49]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[test]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">A16_49</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[Podgrupa]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Podgrupa"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Podgrupa]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[test]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Podgrupa</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[Total_Individuals]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Total_Individuals"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Total_Individuals]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[test]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">Total_Individuals</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[Column3]"
+                      cachedDataType="i4"
+                      cachedName="Column3"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Column3]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Column3]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[second_Description]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="second_Description"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[second_Description]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[second_Description]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[Start_time]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Start_time"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Start_time]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Start_time]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[Duration]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Duration"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Duration]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Duration]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[Variable]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Variable"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Variable]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Variable]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[Date]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Date]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[Channel]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Channel"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Channel]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Channel]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input].Columns[Description]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Description"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Description]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column’s value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Description]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output]"
+                  name="Unpivot Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Pivot Key Value]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Pivot Key Value]"
+                      name="Pivot Key Value">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">true</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[test]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[test]"
+                      name="test">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Column3]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Column3]"
+                      name="Column3">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[second_Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[second_Description]"
+                      name="second_Description">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Start_time]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Start_time]"
+                      name="Start_time">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Duration]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Duration]"
+                      name="Duration">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Variable]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Variable]"
+                      name="Variable">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Date]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Date]"
+                      name="Date">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Channel]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Channel]"
+                      name="Channel">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output].Columns[Description]"
+                      name="Description">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Unpivot 1.Inputs[Unpivot Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Unpivot Output]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Unpivot Output"
+              startId="Package\Data Flow Task\Unpivot 1.Outputs[Unpivot Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FILL_ROWS"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E9C87818-BFF9-4452-88CD-14EEEA1F56F3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FILL_ROWS"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DAC55F50-9B38-4CAC-AD21-904516CE7C2C}"
+          SQLTask:SqlStatementSource="&#xA;DECLARE @old varchar(50);&#xA;DECLARE @old_long varchar(100);&#xA;UPDATE hd_project WITH(TABLOCKX)&#xA;SET @old = Date = CASE WHEN len(replace(Date),'&quot;',''))&lt;1 THEN @old ELSE Date END&#xA;OPTION(MAXDOP 1);&#xA;&#xA;set @old=''&#xA;UPDATE hd_project WITH(TABLOCKX)&#xA;SET @old = Channel= CASE WHEN len(replace(Channel,'&quot;',''))&lt;1 THEN @old ELSE Channel END&#xA;OPTION(MAXDOP 1);&#xA;&#xA;set @old_long=''&#xA;UPDATE hd_project WITH(TABLOCKX)&#xA;SET @old_long = Description = CASE WHEN len(replace(Description),'&quot;',''))&lt;1 THEN @old_long ELSE Description END&#xA;OPTION(MAXDOP 1);&#xA;&#xA;set @old_long=''&#xA;UPDATE hd_project WITH(TABLOCKX)&#xA;SET @old_long = Second_Description = CASE WHEN len(replace(Second_Description),'&quot;',''))&lt;1 THEN @old_long ELSE Second_Description END&#xA;OPTION(MAXDOP 1);&#xA;&#xA;set @old=''&#xA;UPDATE hd_project WITH(TABLOCKX)&#xA;SET @old = Start_time = CASE WHEN len(replace(Start_time),'&quot;',''))&lt;1 THEN @old ELSE Start_time END&#xA;OPTION(MAXDOP 1);&#xA;&#xA;set @old_long=''&#xA;UPDATE hd_project WITH(TABLOCKX)&#xA;SET @old = Duration = CASE WHEN len(replace(Duration),'&quot;',''))&lt;1 THEN @old ELSE Duration END&#xA;OPTION(MAXDOP 1);&#xA;&#xA;set @old_long=''&#xA;UPDATE hd_project WITH(TABLOCKX)&#xA;SET A16_49 = replace(REPLACE(REPLACE(REPLACE(A16_49,'0.000','0'),'%',''),',','.'),' ','' )&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\IMPORT_DATA"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{4B980CFA-2BF0-4A21-B7A6-D10BDA8E4935}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="IMPORT_DATA"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\IMPORT_DATA\Destination - HD_PROJECT"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - HD_PROJECT"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[HD_PROJECT]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;Date&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Date&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Date&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;Channel&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Channel&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Channel]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Channel&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;Description&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="&quot;Description&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Description&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;2nd Description&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="&quot;2nd Description&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[second_Description]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;2nd Description&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;Start time&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Start time&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Start_time]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Start time&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;Duration&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Duration&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Duration]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Duration&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;Variable Target&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Variable Target&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Variable]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Variable Target&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;Total Individuals&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Total Individuals&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Total_Individuals]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Total Individuals&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;Podgrupa&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Podgrupa&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Podgrupa]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Podgrupa&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;A16-49&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;A16-49&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[A16_49]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;A16-49&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;M16-49&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;M16-49&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[M16_49]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;M16-49&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;A4-15&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;A4-15&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[A4_15]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;A4-15&quot;]" />
+                    <inputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].Columns[&quot;A4-9&quot;]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;A4-9&quot;"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[A4_9]"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;A4-9&quot;]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Date]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Channel]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Channel" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[second_Description]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="second_Description" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Start_time]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Start_time" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Duration]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Duration" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Variable]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Variable" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Total_Individuals]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Total_Individuals" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Podgrupa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Podgrupa" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[A16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="A16_49" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[M16_49]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="M16_49" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[A4_15]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="A4_15" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[A4_9]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="A4_9" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input].ExternalColumns[Column3]"
+                      dataType="i4"
+                      name="Column3" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\IMPORT_DATA\Destination - HD_PROJECT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Destination - HD_PROJECT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\IMPORT_DATA\Destination - HD_PROJECT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Source - HD_PROJECT_txt"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[Column 13]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[Column 13]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[Column 13]"
+                      name="Column 13"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Date&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Date&quot;]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Date&quot;]"
+                      name="&quot;Date&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Channel&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Channel&quot;]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Channel&quot;]"
+                      name="&quot;Channel&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Description&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Description&quot;]"
+                      length="100"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Description&quot;]"
+                      name="&quot;Description&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;2nd Description&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;2nd Description&quot;]"
+                      length="100"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;2nd Description&quot;]"
+                      name="&quot;2nd Description&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Start time&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Start time&quot;]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Start time&quot;]"
+                      name="&quot;Start time&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Duration&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Duration&quot;]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Duration&quot;]"
+                      name="&quot;Duration&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Variable Target&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Variable Target&quot;]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Variable Target&quot;]"
+                      name="&quot;Variable Target&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Total Individuals&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Total Individuals&quot;]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Total Individuals&quot;]"
+                      name="&quot;Total Individuals&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Podgrupa&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Podgrupa&quot;]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;Podgrupa&quot;]"
+                      name="&quot;Podgrupa&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;A16-49&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;A16-49&quot;]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;A16-49&quot;]"
+                      name="&quot;A16-49&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;M16-49&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;M16-49&quot;]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;M16-49&quot;]"
+                      name="&quot;M16-49&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;A4-15&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-15&quot;]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;A4-15&quot;]"
+                      name="&quot;A4-15&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;A4-9&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-9&quot;]"
+                      length="50"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].Columns[&quot;A4-9&quot;]"
+                      name="&quot;A4-9&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[Column 13]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Column 13" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Date&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Date&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Channel&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Channel&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Description&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="&quot;Description&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;2nd Description&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="&quot;2nd Description&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Start time&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Start time&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Duration&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Duration&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Variable Target&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Variable Target&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Total Individuals&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Total Individuals&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;Podgrupa&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Podgrupa&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;A16-49&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;A16-49&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;M16-49&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;M16-49&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-15&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;A4-15&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output].ExternalColumns[&quot;A4-9&quot;]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="&quot;A4-9&quot;" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\IMPORT_DATA.Paths[Flat File Source Output]"
+              endId="Package\IMPORT_DATA\Destination - HD_PROJECT.Inputs[Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\IMPORT_DATA\Source - HD_PROJECT_txt.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\IMPORT_TO_DIM"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C212E280-1C52-4DED-A759-6700544DB5DB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="IMPORT_TO_DIM"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DAC55F50-9B38-4CAC-AD21-904516CE7C2C}"
+          SQLTask:SqlStatementSource="&#xA;--create table rough(value varchar(100),value2 varchar(100))&#xA;--DROP TABLE ROUGH&#xA;&#xA;--zasilenie kanałów&#xA;truncate table rough;&#xA;insert into rough(value) select distinct replace(channel,'&quot;','') from hd_project where replace(channel,'&quot;','') not in( select channel_name from channel);&#xA;insert into dbo.CHANNEL(channel_name) select value from dbo.rough;&#xA;&#xA;--zasilanie programów&#xA;truncate table rough;&#xA;insert into rough(value,value2) select distinct replace(description,'&quot;',''),replace(second_description,'&quot;','') from hd_project;&#xA;&#xA;MERGE INTO &#xA;  PROGRAMME a&#xA;USING&#xA;  (SELECT * FROM rough) b&#xA;ON&#xA;  (a.description = b.value and a.second_description=b.value2)&#xA;when not matched then INSERT (description, second_description) values (b.value, b.value2);&#xA;&#xA;--zasilenie grup&#xA;&#xA;alter table groups alter column value  money&#xA;--A16_49&#xA;TRUNCATE TABLE ROUGH&#xA;insert into rough(value,value2) select replace(VARIABLE,'&quot;',''),A16_49  from hd_project;&#xA;&#xA;MERGE INTO&#xA;  GROUPS a&#xA;USING&#xA;  (SELECT * FROM rough) b&#xA;ON&#xA;  (a.VARIABLE_NAME = b.value and a.VALUE=b.value2 and a.GROUP_NAME='A16-49')&#xA;when not matched then  INSERT (VARIABLE_NAME,GROUP_NAME,VALUE) values (b.value,'A16-49', b.value2);&#xA;&#xA;--M16_49&#xA;TRUNCATE TABLE ROUGH&#xA;insert into rough(value,value2) select replace(VARIABLE,'&quot;',''),M16_49  from hd_project;&#xA;&#xA;MERGE INTO&#xA;  GROUPS a&#xA;USING&#xA;  (SELECT * FROM rough) b&#xA;ON&#xA;  (a.VARIABLE_NAME = b.value and a.VALUE=b.value2 and a.GROUP_NAME='M16_49')&#xA;when not matched then  INSERT (VARIABLE_NAME,GROUP_NAME,VALUE) values (b.value,'M16_49', b.value2);&#xA;&#xA;--A4_15&#xA;TRUNCATE TABLE ROUGH&#xA;insert into rough(value,value2) select replace(VARIABLE,'&quot;',''),A4_15  from hd_project;&#xA;&#xA;MERGE INTO&#xA;  GROUPS a&#xA;USING&#xA;  (SELECT * FROM rough) b&#xA;ON&#xA;  (a.VARIABLE_NAME = b.value and a.VALUE=b.value2 and a.GROUP_NAME='A4_15')&#xA;when not matched then  INSERT (VARIABLE_NAME,GROUP_NAME,VALUE) values (b.value,'A4_15', b.value2);&#xA;&#xA;--A4_9&#xA;TRUNCATE TABLE ROUGH&#xA;insert into rough(value,value2) select replace(VARIABLE,'&quot;',''),A4_9  from hd_project;&#xA;&#xA;MERGE INTO&#xA;  GROUPS a&#xA;USING&#xA;  (SELECT * FROM rough) b&#xA;ON&#xA;  (a.VARIABLE_NAME = b.value and a.VALUE=b.value2 and a.GROUP_NAME='A4_9')&#xA;when not matched then  INSERT (VARIABLE_NAME,GROUP_NAME,VALUE) values (b.value,'A4_9', b.value2);&#xA;&#xA;--TOTAL_INDIVIDUALS&#xA;TRUNCATE TABLE ROUGH&#xA;insert into rough(value,value2) select replace(VARIABLE,'&quot;',''),TOTAL_INDIVIDUALS  from hd_project;&#xA;&#xA;MERGE INTO&#xA;  GROUPS a&#xA;USING&#xA;  (SELECT * FROM rough) b&#xA;ON&#xA;  (a.VARIABLE_NAME = b.value and a.VALUE=b.value2 and a.GROUP_NAME='TOTAL_INDIVIDUALS')&#xA;when not matched then  INSERT (VARIABLE_NAME,GROUP_NAME,VALUE) values (b.value,'TOTAL_INDIVIDUALS', b.value2);&#xA;&#xA;&#xA;--PODGRUPA&#xA;TRUNCATE TABLE ROUGH&#xA;insert into rough(value,value2) select replace(VARIABLE,'&quot;',''),PODGRUPA  from hd_project;&#xA;&#xA;MERGE INTO&#xA;  GROUPS a&#xA;USING&#xA;  (SELECT * FROM rough) b&#xA;ON&#xA;  (a.VARIABLE_NAME = b.value and a.VALUE=b.value2 and a.GROUP_NAME='PODGRUPA')&#xA;when not matched then  INSERT (VARIABLE_NAME,GROUP_NAME,VALUE) values (b.value,'PODGRUPA', b.value2);&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{D87F61DA-AF10-49B3-BC4F-8FC5358563AC}"
+      DTS:From="Package\IMPORT_DATA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\FILL_ROWS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{30C0E2DC-B527-4C22-974A-BF42F2C547B1}"
+      DTS:From="Package\FILL_ROWS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\IMPORT_TO_DIM" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{35A325A4-1A62-4F03-981B-37F88DC39D54}"
+      DTS:From="Package\IMPORT_TO_DIM"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="107,273" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\FILL_ROWS"
+          TopLeft="99,116" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\IMPORT_DATA"
+          TopLeft="107.5,40.5" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\IMPORT_TO_DIM"
+          TopLeft="100,190" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="181.5,82.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.5"
+              Start="0,0"
+              End="0,26">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="180.75,158">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="181.75,232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Data Flow Task\Unpivot 1"
+          TopLeft="363,127" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Data Flow Task\OLE DB Source 1"
+          TopLeft="350,38" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="342,240" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Unpivot Output]"
+          TopLeft="426.25,169">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71"
+              Start="0,0"
+              End="0,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="427.25,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\IMPORT_DATA">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="214,42"
+          Id="Package\IMPORT_DATA\Source - HD_PROJECT_txt"
+          TopLeft="129,12.5" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\IMPORT_DATA\Destination - HD_PROJECT"
+          TopLeft="129.5,303.5" />
+        <EdgeLayout
+          Id="Package\IMPORT_DATA.Paths[Flat File Source Output]"
+          TopLeft="234.25,54.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,249"
+              Start="0,0"
+              End="0,241.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,241.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\IMPORT_DATA\Destination - HD_PROJECT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
