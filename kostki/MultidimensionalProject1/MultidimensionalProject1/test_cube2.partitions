@@ -1,0 +1,105 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8ecba162-d408-4034-b0b2-2658a76ad8c6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>test_cube2</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>DATE</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="96f1d5f9-ceaa-4eed-8424-7176e9223718">
+          <ID>DATE</ID>
+          <Name>DATE</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="88a85958-1a0e-42d4-8165-dc3f552ebff6">
+            <DataSourceViewID>B</DataSourceViewID>
+            <TableID>dbo_DATE</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>CHANNEL</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="979b9126-df2b-4580-ab34-05e4c639c73f">
+          <ID>CHANNEL</ID>
+          <Name>CHANNEL</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="5132319f-3eef-4c7f-9d61-c03880dcf081">
+            <DataSourceViewID>B</DataSourceViewID>
+            <TableID>dbo_CHANNEL</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>GROUPS</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d8e3b2fc-997f-4ccc-a071-7140561fc34c">
+          <ID>GROUPS</ID>
+          <Name>GROUPS</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c96d95d7-8b35-48c7-9a12-277730f3e537">
+            <DataSourceViewID>B</DataSourceViewID>
+            <TableID>dbo_GROUPS</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>PROGRAMME</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="5b71759b-8281-47c6-9ab5-78d34b9b6dd2">
+          <ID>PROGRAMME</ID>
+          <Name>PROGRAMME</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="7b35c40b-633b-4152-b876-3580b48a4c83">
+            <DataSourceViewID>B</DataSourceViewID>
+            <TableID>dbo_PROGRAMME</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>TIME</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d822e47b-009f-4cb5-acc4-b7b0bc666370">
+          <ID>TIME</ID>
+          <Name>TIME</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ec4e8f23-6e6b-42df-98f8-d1707ffbec11">
+            <DataSourceViewID>B</DataSourceViewID>
+            <TableID>dbo_TIME</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

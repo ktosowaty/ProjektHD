@@ -1,0 +1,140 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d8c5aad9-cb52-40f0-9202-a6c8b125f22f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>GROUPS</ID>
+  <Name>GROUPS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="5f6b3e41-2aaa-4159-9286-c5da1c65a56c">
+    <DataSourceViewID>B</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="63eff79f-dfaf-4ee9-901a-f94d685ab342">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="f2f52bc7-959a-4e4d-8c85-923e24316a2e">
+      <ID>GROUP ID</ID>
+      <Name>GROUP ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8cc324d1-1ffa-4dde-b9fd-a64e106f57ab">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0bc19243-7068-457c-ba1d-646c511f2bc3">
+            <TableID>dbo_GROUPS</TableID>
+            <ColumnID>GROUP_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9e17a486-fec6-47bb-8094-787dcd73c508">
+          <AttributeID>VARIABLE NAME</AttributeID>
+          <Name>VARIABLE NAME</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c16dd5ca-41d8-4a26-a40c-172de8321eb2">
+          <AttributeID>GROUP NAME</AttributeID>
+          <Name>GROUP NAME</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8006d68e-68d4-4e7b-973d-e3a583b43cc1">
+          <AttributeID>VALUE</AttributeID>
+          <Name>VALUE</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="df98ba6d-4634-4337-8e47-98274f1fb876">
+      <ID>VARIABLE NAME</ID>
+      <Name>VARIABLE NAME</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e3f06de8-09da-48e1-8b96-8e338522c1f3">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="016d4cbe-3149-4abe-aa2b-e10902c7892d">
+            <TableID>dbo_GROUPS</TableID>
+            <ColumnID>VARIABLE_NAME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4a0e5dfc-90f1-464d-9edf-8a32ccc4aa54">
+      <ID>GROUP NAME</ID>
+      <Name>GROUP NAME</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d22aa22f-ed7d-4247-9b99-31300bf6e730">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6e413583-bad4-4fee-a0f7-d4d52a462ce4">
+            <TableID>dbo_GROUPS</TableID>
+            <ColumnID>GROUP_NAME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cdd066de-4059-4e06-92ff-77831c65cdc1">
+      <ID>VALUE</ID>
+      <Name>VALUE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0ce95e95-a2ae-4f79-986f-9d5fb9bda393">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a960539b-bbfd-416d-9977-de4d51f9e711">
+            <TableID>dbo_GROUPS</TableID>
+            <ColumnID>VALUE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
