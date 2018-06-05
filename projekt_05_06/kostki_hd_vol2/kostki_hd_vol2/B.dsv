@@ -1,0 +1,226 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="51923ee6-89fb-48b4-81a3-28ec881112c0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>B</ID>
+  <Name>B</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>B</DataSourceID>
+  <Schema>
+    <xs:schema id="B" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="B" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="708a254b-13f9-4f06-95a1-bfef2da71cee">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_FACTS_TABLE" msprop:design-time-name="cfd9a53b-0a28-4e82-bcc8-db5fb3ade42c" msprop:DbTableName="FACTS_TABLE" msprop:FriendlyName="FACTS_TABLE" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FACT_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="3a431bea-006b-4ab8-8803-de489292c1a0" msprop:DbColumnName="FACT_ID" msprop:FriendlyName="FACT_ID" type="xs:int" />
+                  <xs:element name="CHANNEL_ID" msprop:design-time-name="704088dd-076c-4917-83e2-5dd4e0578d9d" msprop:DbColumnName="CHANNEL_ID" msprop:FriendlyName="CHANNEL_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="PROGRAMME_ID" msprop:design-time-name="3e760e71-d85a-4a0e-bd8a-598bed149361" msprop:DbColumnName="PROGRAMME_ID" msprop:FriendlyName="PROGRAMME_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="DURATION" msprop:design-time-name="f6203ba2-b952-4fce-9906-79be9ca5c11a" msprop:DbColumnName="DURATION" msprop:FriendlyName="DURATION" type="xs:int" minOccurs="0" />
+                  <xs:element name="NORMAL_DATE_ID" msprop:design-time-name="5435c106-cf93-471e-8e47-c3aa4bdef97c" msprop:DbColumnName="NORMAL_DATE_ID" msprop:FriendlyName="NORMAL_DATE_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="TIME_ID" msprop:design-time-name="795844fc-58b9-4a5e-b134-f93867327903" msprop:DbColumnName="TIME_ID" msprop:FriendlyName="TIME_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="RADIO_DATE_ID" msprop:design-time-name="6f6f12f2-af70-43ae-89b6-b1bf53fc2413" msprop:DbColumnName="RADIO_DATE_ID" msprop:FriendlyName="RADIO_DATE_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="GROUP_ID" msprop:design-time-name="32272df2-e313-4b97-87a9-66dc3eeaf6ad" msprop:DbColumnName="GROUP_ID" msprop:FriendlyName="GROUP_ID" type="xs:int" minOccurs="0" />
+                  <xs:element name="VALUE" msprop:design-time-name="fe5b46cb-054d-4e2c-ac12-f6ee91f84e86" msprop:DbColumnName="VALUE" msprop:FriendlyName="VALUE" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_CHANNEL" msprop:design-time-name="3508e658-7d83-4e1f-b70d-769b37ad25e9" msprop:DbTableName="CHANNEL" msprop:FriendlyName="CHANNEL" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CHANNEL_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="98e974f8-01d6-48db-8653-3b65f829ebc2" msprop:DbColumnName="CHANNEL_ID" msprop:FriendlyName="CHANNEL_ID" type="xs:int" />
+                  <xs:element name="CHANNEL_NAME" msprop:design-time-name="07a56e8d-e0ee-493b-a97c-106b1c109f77" msprop:DbColumnName="CHANNEL_NAME" msprop:FriendlyName="CHANNEL_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CATEGORY" msprop:design-time-name="bf0216d3-5fa4-4cc2-895a-eb1033245e05" msprop:DbColumnName="CATEGORY" msprop:FriendlyName="CATEGORY" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="70" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MEDIA_GROUP" msprop:design-time-name="f9829fa6-71e6-41de-a4d2-8fa192681083" msprop:DbColumnName="MEDIA_GROUP" msprop:FriendlyName="MEDIA_GROUP" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="70" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_PROGRAMME" msprop:design-time-name="8c0d1870-1410-4b08-a630-578a1b871e27" msprop:DbTableName="PROGRAMME" msprop:FriendlyName="PROGRAMME" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PROGRAMME_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="f12e79bf-1f34-498f-80e3-551f0a71fdc4" msprop:DbColumnName="PROGRAMME_ID" msprop:FriendlyName="PROGRAMME_ID" type="xs:int" />
+                  <xs:element name="DESCRIPTION" msprop:design-time-name="eea9e500-4753-4cf2-a593-6669c4e6b065" msprop:DbColumnName="DESCRIPTION" msprop:FriendlyName="DESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SECOND_DESCRIPTION" msprop:design-time-name="2f22080b-021f-4d8b-bff3-07f63d1fcf92" msprop:DbColumnName="SECOND_DESCRIPTION" msprop:FriendlyName="SECOND_DESCRIPTION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_TIME" msprop:design-time-name="7f2bd540-73dd-49c8-a46d-d052551229f9" msprop:DbTableName="TIME" msprop:FriendlyName="TIME" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TIME_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="ae9b6e17-dea5-47af-8296-dee761cf75bb" msprop:DbColumnName="TIME_ID" msprop:FriendlyName="TIME_ID" type="xs:int" />
+                  <xs:element name="HOUR_NORMAL" msprop:design-time-name="0adbcb0b-2232-4e36-8298-5f94b94cc70d" msprop:DbColumnName="HOUR_NORMAL" msprop:FriendlyName="HOUR_NORMAL" type="xs:int" minOccurs="0" />
+                  <xs:element name="HOUR_RADIO" msprop:design-time-name="0d7795e1-b2ee-402e-927b-f43b46d2f72c" msprop:DbColumnName="HOUR_RADIO" msprop:FriendlyName="HOUR_RADIO" type="xs:int" minOccurs="0" />
+                  <xs:element name="MINUTE" msprop:design-time-name="2437a869-2207-4887-bb3b-1693ad12d1d8" msprop:DbColumnName="MINUTE" msprop:FriendlyName="MINUTE" type="xs:int" minOccurs="0" />
+                  <xs:element name="WHOLE_TIME" msprop:design-time-name="3abbec14-263d-470e-83da-41dd5e9ec501" msprop:DbColumnName="WHOLE_TIME" msprop:FriendlyName="WHOLE_TIME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FLAG" msprop:design-time-name="36b0bd14-b867-4a33-b127-2d681ac1b565" msprop:DbColumnName="FLAG" msprop:FriendlyName="FLAG" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_GROUPS" msprop:design-time-name="8d4332dc-c9a8-4229-951c-0176a93d1852" msprop:DbTableName="GROUPS" msprop:FriendlyName="GROUPS" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="GROUP_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="60f46e37-2a7f-4412-ba74-412095025714" msprop:DbColumnName="GROUP_ID" msprop:FriendlyName="GROUP_ID" type="xs:int" />
+                  <xs:element name="VARIABLE_NAME" msprop:design-time-name="36e10854-db80-464e-acc1-9085ed8ca892" msprop:DbColumnName="VARIABLE_NAME" msprop:FriendlyName="VARIABLE_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GROUP_NAME" msprop:design-time-name="94331c5e-ff98-4be5-9177-987b18754304" msprop:DbColumnName="GROUP_NAME" msprop:FriendlyName="GROUP_NAME" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="VALUE" msprop:design-time-name="1e9ead77-8d64-4ce1-8d08-c99d62f505a4" msprop:DbColumnName="VALUE" msprop:FriendlyName="VALUE" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DATE" msprop:design-time-name="dd9f80cf-89bf-4b0e-a8e5-43c9dccc6f1e" msprop:DbTableName="DATE" msprop:FriendlyName="DATE" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DATE_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="f7bc512e-16fd-4c1b-a9c9-cd709ded48ca" msprop:DbColumnName="DATE_ID" msprop:FriendlyName="DATE_ID" type="xs:int" />
+                  <xs:element name="YEAR" msprop:design-time-name="b8bf4f30-b436-41f7-bb32-2087a4751935" msprop:DbColumnName="YEAR" msprop:FriendlyName="YEAR" type="xs:int" minOccurs="0" />
+                  <xs:element name="QUARTER" msprop:design-time-name="c6aeac72-b3b6-4e71-9e51-5eb2d152f5f8" msprop:DbColumnName="QUARTER" msprop:FriendlyName="QUARTER" type="xs:int" minOccurs="0" />
+                  <xs:element name="MONTH" msprop:design-time-name="f8c61002-8f31-4529-8ee4-05707a6b8e08" msprop:DbColumnName="MONTH" msprop:FriendlyName="MONTH" type="xs:int" minOccurs="0" />
+                  <xs:element name="DAY" msprop:design-time-name="8b3856a0-7f47-48e0-9fa0-579f14153e27" msprop:DbColumnName="DAY" msprop:FriendlyName="DAY" type="xs:int" minOccurs="0" />
+                  <xs:element name="WEEK" msprop:design-time-name="7df4aeae-8468-4e5d-9fcc-4915cbb5dbe9" msprop:DbColumnName="WEEK" msprop:FriendlyName="WEEK" type="xs:int" minOccurs="0" />
+                  <xs:element name="DOW" msprop:design-time-name="62d19748-09f9-4611-b649-02cf7b3f4365" msprop:DbColumnName="DOW" msprop:FriendlyName="DOW" type="xs:int" minOccurs="0" />
+                  <xs:element name="WHOLE_DATA" msprop:design-time-name="50d1eece-9f1c-496f-8659-669108a2cb25" msprop:DbColumnName="WHOLE_DATA" msprop:FriendlyName="WHOLE_DATA" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FACTS_TABLE" />
+          <xs:field xpath="FACT_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_CHANNEL_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_CHANNEL" />
+          <xs:field xpath="CHANNEL_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_PROGRAMME_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_PROGRAMME" />
+          <xs:field xpath="PROGRAMME_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_TIME_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_TIME" />
+          <xs:field xpath="TIME_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_GROUPS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_GROUPS" />
+          <xs:field xpath="GROUP_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_DATE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DATE" />
+          <xs:field xpath="DATE_ID" />
+        </xs:unique>
+        <xs:keyref name="FK_FACTS_TA_RELATIONS_DATEl" refer="dbo_DATE_Constraint1">
+          <xs:selector xpath=".//dbo_FACTS_TABLE" />
+          <xs:field xpath="RADIO_DATE_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACTS_TA_RELATIONS_PROGRAMM" refer="dbo_PROGRAMME_Constraint1">
+          <xs:selector xpath=".//dbo_FACTS_TABLE" />
+          <xs:field xpath="PROGRAMME_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACTS_TA_RELATIONS_GROUPS" refer="dbo_GROUPS_Constraint1">
+          <xs:selector xpath=".//dbo_FACTS_TABLE" />
+          <xs:field xpath="GROUP_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACTS_TA_RELATIONS_CHANNEL" refer="dbo_CHANNEL_Constraint1">
+          <xs:selector xpath=".//dbo_FACTS_TABLE" />
+          <xs:field xpath="CHANNEL_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACTS_TA_RELATIONS_DATE" refer="dbo_DATE_Constraint1">
+          <xs:selector xpath=".//dbo_FACTS_TABLE" />
+          <xs:field xpath="NORMAL_DATE_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACTS_TA_RELATIONS_TIME" refer="dbo_TIME_Constraint1">
+          <xs:selector xpath=".//dbo_FACTS_TABLE" />
+          <xs:field xpath="TIME_ID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <B xmlns="" />
+  </Schema>
+</DataSourceView>

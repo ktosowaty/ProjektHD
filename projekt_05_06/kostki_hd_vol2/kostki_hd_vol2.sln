@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "kostki_hd_vol2", "kostki_hd_vol2\kostki_hd_vol2.dwproj", "{4BB46A17-0463-4D80-A0B3-D32835D81661}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BB46A17-0463-4D80-A0B3-D32835D81661}.Development|Default.ActiveCfg = Development
+		{4BB46A17-0463-4D80-A0B3-D32835D81661}.Development|Default.Build.0 = Development
+		{4BB46A17-0463-4D80-A0B3-D32835D81661}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA33CC3C-AA07-4BD7-A4F1-91C2A0075871}
+	EndGlobalSection
+EndGlobal

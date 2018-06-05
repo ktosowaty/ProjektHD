@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>kostki_hd_vol2</Database>
+    <Server>DESKTOP-LDIQM1D\KOSTKI_HD</Server>
+    <ConnectionString>Data Source=DESKTOP-LDIQM1D\KOSTKI_HD;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>fPSHf3RMV53wxeKLwE/DLtrrf6c=05.06.2018 20:08:0405.06.2018 20:08:04</TimeStamp>
+        <ID>
+          <String>B</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>1pSxlzXjvB2VebeJp/drDp2vaWY=05.06.2018 20:09:4205.06.2018 20:08:15</TimeStamp>
+        <ID>
+          <String>B</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>yTxn/D8atzF/WsqtrAqm5J5caf0=05.06.2018 20:10:1605.06.2018 20:09:57</TimeStamp>
+        <ID>
+          <String>TIME</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>H0mSfe49h5WOhr0e20DUCd7ChI0=05.06.2018 20:10:3205.06.2018 20:09:57</TimeStamp>
+        <ID>
+          <String>DATE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>We0RijIhtb0lESjjVha7Ev8Cmv4=05.06.2018 20:10:4305.06.2018 20:09:57</TimeStamp>
+        <ID>
+          <String>CHANNEL</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>B2HCY/jMb0xoPayFyyMMILeD7hQ=05.06.2018 20:10:5605.06.2018 20:09:57</TimeStamp>
+        <ID>
+          <String>GROUPS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>aBO1nLxpYD1ooLJFfiNO7ECmffg=05.06.2018 20:11:0705.06.2018 20:09:57</TimeStamp>
+        <ID>
+          <String>PROGRAMME</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>A1/h2Aw3BHVFY4QlA2mZkW8bGDM=05.06.2018 20:18:2105.06.2018 20:13:45</TimeStamp>
+        <ID>
+          <String>FACTS TABLE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>UKrCYdocjzvLRAp2+ftZDs6IIto=05.06.2018 21:01:2605.06.2018 20:09:57t9bWSfkePTU6ENNJejwibw1VF40=05.06.2018 20:09:5805.06.2018 20:09:57</TimeStamp>
+        <ID>
+          <String>B</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>TcInwNQzQ1qI5ONFx2pCQCEPwak=05.06.2018 11:10:4205.06.2018 11:10:42</TimeStamp>
+      <ID>
+        <String>kostki_hd_vol2</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2018-06-05T19:01:29.22Z</LastDeployed>
+</DeploymentSnapshot>
